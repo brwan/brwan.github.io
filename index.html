@@ -8,16 +8,21 @@
 <meta name="description" content="Jefe de proyecto y Desarrollador fontend senior">
 <meta name="keywords" content="web,developer,designer,resume" />
 <meta name="author" content="Your Name">
-<!-- link href="brwan2.css" rel="stylesheet" media="screen" -->
-<link rel="stylesheet" type="text/css" href="/brwan2.css"  media="screen">
+<link href="/brwan2.css" rel="stylesheet" media="screen" type="text/css">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script>
 function changecss(cssFile, cssLinkIndex) {
     var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
-    var newlink = document.createElement("link");
-    newlink.setAttribute("rel", "stylesheet");
-    newlink.setAttribute("type", "text/css");
-    newlink.setAttribute("href", cssFile);
-    document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
+    $("body").fadeOut( function() {
+      // Switch the stylesheet
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("type", "text/css");
+      newlink.setAttribute("href", cssFile);
+      document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
+      // And then:
+      $( this ).fadeIn().focus();
+    });
 }
 </script>
 </head>
@@ -163,11 +168,12 @@ function changecss(cssFile, cssLinkIndex) {
     <nav class="styles">
       <h2>Cambiar presentración</h2>
       <ul>
-        <li class="main"><a href="#" onclick="changecss('brwan2.css', 0)" title="Initial">1</a></li>
-        <li class="dark"><a href="#" onclick="changecss('brwan3.css', 0)" title="Inverse">2</a></li>
-        <li class="boxs"><a href="#" onclick="changecss('brwan4.css', 0)" title="Boxes">3</a></li>
-        <li class="alte"><a href="#" onclick="changecss('brwan5.css', 0)" title="Blocks">4</a></li>
+        <li class="main"><a href="#" onclick="changecss('brwan2.css', 0)" title="inicial">1</a></li>
+        <li class="dark"><a href="#" onclick="changecss('brwan3.css', 0)" title="inversa">2</a></li>
+        <li class="boxs"><a href="#" onclick="changecss('brwan4.css', 0)" title="cajas">3</a></li>
+        <li class="alte"><a href="#" onclick="changecss('brwan5.css', 0)" title="bloques">4</a></li>
     </nav>
   </footer>
 </body>
 </html>
+    
