@@ -20,15 +20,11 @@ ul:last-child{margin-bottom:0;}
 time + time:before{content:" - ";}
 mark{color:#000;background-color:#fff;}
 mark::before{content:"@ ";display:inline;vertical-align:middle;}
+a{margin:0 -2px;padding:0 2px;color:#000;text-decoration:none;transition:.3s;}
+a:visited{color:#000;transition:.3s;}
+a:hover, a:focus{color:#000;text-decoration:underline;transition:.3s;}
+a:active{color:038;transition:.3s;}
 ::selection{color:#fff;background-color:#000;}
-
-/*NAV*/
-nav{position:absolute;right:.5rem;top:85%;width:100%;text-align:center;font-family:arial, sans-serif;}
-nav:hover span, nav:focus span{visibility:visible;}
-nav span{display:block;visibility:hidden;}
-nav a{display:inline-block;padding:.25rem .75rem;color:#fff;background-color:#000;border:2px solid #fff;border-radius:50%;text-decoration:none;}
-nav a:hover, nav a:focus{background-color:#350000;}
-nav .boxs{color:#fff;background-color:#700;}
 
 /*HEADER*/
 header{position:relative;padding:3rem 0 3rem;color:#fff;background-color:#000;text-align:center;}
@@ -45,18 +41,16 @@ section p{margin:0 0 1rem;}
 section h3 + p{color:#333;margin:0 0 .5rem;}
 
 /*MAIN*/
-.experience li{display:grid;grid-template-columns:3fr 2fr 4fr;position:relative;margin:0 0 2rem;padding:1.5rem;border:1px solid #333;}
+.experience li{display:grid;position:relative;margin:0 0 2rem;padding:1.5rem;border:1px solid #333;}
 .experience li:before{content:"";position:absolute;right:-8px;bottom:-8px;height:0;border:10px solid #fff;}
 .experience li:after{content:"";position:absolute;right:3px;bottom:3px;width:0;height:0;border:10px solid #000;border-color:transparent transparent #000 transparent;transform:rotate(-45deg);}
-.experience h3{grid-column:1;}
 .experience h3 mark{display:block;font-size:.875em;font-weight:normal;}
-.experience h3 + p{grid-column:2;font-style:italic;}
+.experience h3 + p{font-style:italic;}
 .experience p > mark{display:block;}
 .experience mark::before{display:none;}
-.experience h3 + p + p{grid-column:3;}
-.experience h3 + p + p + p{grid-column:3;margin-bottom:0;}
+.experience h3 + p + p + p{margin-bottom:0;}
 
-.experience-extra ul{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;grid-gap:1rem;}
+.experience-extra ul{display:grid;grid-template-columns:1fr 1fr;grid-gap:1rem;}
 .experience-extra li{position:relative;margin:0 0 2rem;padding:1.5rem;border:1px solid #333;}
 .experience-extra li:before{content:"";position:absolute;right:-8px;bottom:-8px;height:0;border:10px solid #fff;}
 .experience-extra li:after{content:"";position:absolute;right:3px;bottom:3px;width:0;height:0;border:10px solid #000;border-color:transparent transparent #000 transparent;transform:rotate(-45deg);}
@@ -64,6 +58,17 @@ section h3 + p{color:#333;margin:0 0 .5rem;}
 .experience-extra h3 + p{grid-column:2;font-style:italic;}
 .experience-extra mark{display:block;}
 .experience-extra mark::before{display:none;}
+@media (min-width: 48em) {
+  .experience li{grid-template-columns:3fr 2fr 4fr;}
+  .experience h3{grid-column:1;}
+  .experience h3 + p{grid-column:2;}
+  .experience h3 + p + p{grid-column:3;}
+  .experience h3 + p + p + p{grid-column:3;margin-bottom:0;}
+
+  .experience-extra ul{grid-template-columns:1fr 1fr 1fr 1fr;}
+  .experience-extra h3 mark{display:block;font-size:.875em;font-weight:normal;}
+  .experience-extra h3 + p{grid-column:2;font-style:italic;}
+}
 
 @media (min-width: 48em) {
   main, aside{display:grid;grid-template-columns:1fr 1fr;margin:0 6%;}
@@ -85,5 +90,43 @@ section h3 + p{color:#333;margin:0 0 .5rem;}
   .profile{padding:8rem 0 3rem;border:0 none;}
   .profile p::before{content:"☺ ▲ ☼ ♫";float:right;width:30%;height:6rem;margin-left:5%;background-color:#fff;font-size:3rem;text-align:center;letter-spacing: .4rem}
 }
+
+.lc span::before, .gm span::before, .tw a::before, .in a::before, .gh a::before,
+.cp a::before{content:"";display:inline-block;width:16px;height:16px;margin:.1rem .5rem 0 0;background:url(gmail.svg) no-repeat 50%;background-size:contain;}
+.lc span::before{background-image:url(location.svg);}
+.gm span::before{background-image:url(gmail.svg);}
+.tw a::before{background-image:url(linkedin.svg);}
+.in a::before{background-image:url(twitter.svg);}
+.gh a::before{background-image:url(github.svg);}
+.cp a::before{background-image:url(codepen.svg);}
+
 /*FOOTER*/
-footer{}
+footer{padding:1rem;text-align:center;color:#fff;}
+footer p{display:inline-block;margin:0;}
+footer li{display:inline-block;margin:0;}
+footer > ul a,
+footer > ul a:hover, footer > ul a:focus, footer > ul a:visited{color:#fff;}
+
+/*NAV*/
+nav{}
+nav span{display:block;visibility:hidden;}
+nav a{}
+nav a:hover, nav a:focus{background-color:#35000;}
+nav .boxs a{color:#fff;background-color:#000;}
+
+/*NAV*/
+nav{position:absolute;right:3px;top:3px;padding:0;text-align:center;transition:.25s;}
+nav h2{position:absolute;top:-999em;left:-999em;display:none;width:10rem;color:#757575;font-size:.875rem;text-align:left;transition:.25s;}
+nav:hover h2, nav:focus h2{display:block;transition:.25s;}
+nav a{position:relative;padding:.1rem .5rem .25rem;margin:0;color:#000;background-color:#fff;border:1px solid transparent;border-radius:50%;text-decoration:none;text-align:center;transition:.25s;}
+nav a:hover, nav a:focus{color:#;background-color:#e4e4e4;transition:.3s;outline:none;text-decoration:none;box-shadow:inset 1px -1px 2px rgba(0,0,0,.25);}
+nav a:active{color:#fff;background-color:#757575;box-shadow:inset 2px -2px 6px rgba(0,0,0,.5);}
+nav a::after{content:"Presentación: " attr(title);position:absolute;top:140%;right:5px;display:none;width:8rem;padding:.25rem .15rem;color:#333;background-color:#fff;box-shadow:2px 2px 6px rgba(0,0,0,.3);font-size:.75rem;transition:.3s;}
+nav a::before{content:"";position:absolute;top:100%;right:25%;display:none;width:0;border:5px solid #fff;border-color:transparent transparent #fff;}
+nav a:hover::before, nav a:focus::before,
+nav a:hover::after, nav a:focus::after{display:block;transition:.3s;}
+nav .boxs a{color:#fff;background-color:#000;border-color:#fff;box-shadow:inset 2px -2px 4px rgba(0,0,0,.5);}
+@media (min-width:75em) {
+  nav{top:-.75rem;right:.75rem;}
+  nav a::after{right:-3.5rem;}
+}
