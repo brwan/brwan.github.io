@@ -24,13 +24,6 @@ function repcss(cssFile, cssLinkIndex) {
 
 <body>
   <header>
-    <nav>
-      <span>Cambiar presentración</span>
-      <a class="main" href="#" onclick="repcss('brwan2.css', 0)" title="Principal">1</a>
-      <a class="dark" href="#" onclick="repcss('brwan3.css', 0)" title="Reverso">2</a>
-      <a class="boxs" href="#" onclick="repcss('brwan4.css', 0)" title="Cajas">3</a>
-      <a class="alte" href="#" onclick="repcss('brwan5.css', 0)" title="Bloques">4</a>
-    </nav>
     <figure><img src="/bperez_cv.jpg" alt="" /></figure>
     <h1>Bruno Pérez</h1>
     <h2>Jefe de proyecto y desarrollador frontend</h2>
@@ -122,12 +115,12 @@ function repcss(cssFile, cssLinkIndex) {
     <section class="details">
       <h2>Detalles</h2>
       <ul>
-        <li>Barcelona & Madrid</li>
-        <li>(Gmail) brunoperezlaffitte</li>
-        <li>(Linkedin) bperezla</li>
-        <li>(Twitter) @brunoprzl</li>
-        <li>(Gitjub) brwan</li>
-        <li>(Codepen) brwan</li>
+        <li class="lc"><span>Barcelona & Madrid</span></li>
+        <li class="gm"><span>brunoperezlaffitte</span></li>
+        <li class="in"><a href="https://www.linkedin.com/in/bperezla/">bperezla</a></li>
+        <li class="tw"><a href="https://twitter.com/brunoprzl">brunoprzl</a></li>
+        <li class="gh"><a href="https://github.com/brwan">brwan</a></li>
+        <li class="cp"><a href="https://codepen.io/brwan/">brwan</a></li>
       </ul>
     </section>
     <section class="interests">
@@ -164,10 +157,17 @@ function repcss(cssFile, cssLinkIndex) {
   <footer>
     <p>Gracias por el interés ¡Hasta la próxima!</p>
     <ul>
-      <li><a href="">Twitter</a></li>
-      <li><a href="">LinkedIn</a></li>
-      <li><a href=""></a></li>
+      <li><a href="https://twitter.com/brunoprzl">Twitter</a></li>
+      <li><a href="https://www.linkedin.com/in/bperezla/">LinkedIn</a></li>
     </ul>
+    <nav class="styles">
+      <h2>Cambiar presentración</h2>
+      <ul>
+        <li class="main"><a href="#" onclick="changecss('brwan2.css', 0)" title="Initial">1</a></li>
+        <li class="dark"><a href="#" onclick="changecss('brwan3.css', 0)" title="Inverse">2</a></li>
+        <li class="boxs"><a href="#" onclick="changecss('brwan4.css', 0)" title="Boxes">3</a></li>
+        <li class="alte"><a href="#" onclick="changecss('brwan5.css', 0)" title="Blocks">4</a></li>
+    </nav>
   </footer>
 </body>
 </html>
