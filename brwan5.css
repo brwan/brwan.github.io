@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,700|Vidaloka');
+html{background:linear-gradient(to bottom left, #413539, #302428);}
+body{margin:0;padding:0;
+  color:#202123;background-color:#fff;border:0 solid #fabada;
+  box-shadow:0 0 6px rgba(0,0,0,.3);
+  font-size:1em;line-height:1.6;font-family: 'Cabin', Arial, Helvetica, sans-serif;
+  cursor:default;
+}
+@media (min-width: 64em) {
+  body{max-width:64rem;margin:1rem auto;}
+}
+
+/*GENERIC*/
+h1, h2{font-family: 'Vidaloka', Arial, Helvetica, sans-serif;}
+ul{list-style:none;margin:0 0 1rem;padding:0;}
+ul:last-child{margin-bottom:0;}
+time + time:before{content:"";}
+p{margin:0 0 1em;}
+mark{color:inherit;background-color:transparent;}
+::selection{color:#fff;background-color:#000;}
+
+/*NAV*/
+nav{position:absolute;z-index:1;top:0;right:0;font-size:.75rem;font-family:Arial, sans-serif;}
+nav:hover span, nav:focus span{visibility:visible;}
+nav span{display:none;visibility:hidden;}
+nav a{display:inline-block;padding:.25rem .5rem;color:#fff;background-color:#000;border:1px solid #fff;text-decoration:none;}
+nav a:hover, nav a:focus{background-color:#350000;}
+nav .alte{color:#000;background-color:#998F6B;}
+
+/*HEADER*/
+header{position:relative;padding:0;color:#202123;background-color:#fff;text-align:center;}
+header figure{display:block;margin:0 0 1rem;text-align:center;}
+header img{width:100%;height:100%;object-fit:cover;filter: grayscale(85%) brightness(75%) contrast(150%) hue-rotate(35deg);}
+header h1{margin:0 0 .5rem;padding:5rem 0 0;color:#202123;font-size:3.25rem;line-height:1;letter-spacing:.4rem;text-indent:-.1rem;}
+header h2{margin:0 0 .25rem;padding:0 0 .5rem;color:#202123;font-size:1.2rem;font-family: 'Cabin', Arial, Helvetica, sans-serif;line-height:1.2;text-transform:none;}
+header p{margin:0;}
+@media (min-width: 64em) {
+  header{text-align:left;}
+  header figure{float:left;display:block;width:50%;height:440px;margin:0 5.25% 0 0;}
+  header::after{content:"";display:block;clear:both;width:100%;}
+}
+
+section{margin:0;padding:0;color:#fff;background-color:#000;}
+section h2{margin:0;padding:0;text-transform:uppercase;}
+section h3{margin:0;padding:0;}
+section::after{content:"";display:block;clear:both;width:100%;}
+section:nth-child(even) h2{margin:0;color:#000;background-color:#fff;}
+section:nth-child(odd) ul{margin:0;color:#202123;background-color:#fff;}
+section:nth-child(even) h3{color:#998F6B;}
+aside section:nth-child(even) h2{margin:0;color:#fff;background-color:#000;}
+aside section:nth-child(odd) h2{margin:0;color:#202123;background-color:#fff;}
+aside section:nth-child(odd) ul{margin:0;color:#fff;background-color:#000;}
+aside section:nth-child(even) ul{margin:0;color:#000;background-color:#fff;}
+section h3 mark{display:block;font-size:1rem;font-weight:normal;font-style:italic;}
+section p mark::before{content:"_ ";}
+section time{color:#757575;}
+section time + time::before{content:" - ";}
+@media (min-width: 64em) {
+  section{display:grid;grid-template-columns:1fr 1fr}
+  section h2{grid-column: 1;vertical-align:middle;padding:4rem 25%;font-size:6rem;line-height:1;word-break:break-all;letter-spacing:.75rem;}
+  section h2::after{content:"—";display:inline;}
+  section h2 + ul,
+  section h2 + p{grid-column: 2;padding:2rem 10%;}
+  .profile p{margin:0;color:#202123;background-color:#fff;}
+  .profile h2{font-size:3rem;}
+  .experience-extra h2, .education-extra h2, aside h2{font-size:4rem;}
+  .education h2{font-size:5rem;}
+}
+
+/*MAIN*/
+
+/*FOOTER*/
+footer{padding:1rem 10%;color:#fff;background-color:#000;}
+footer p{display:inline-block;vertical-align:bottom;font-size:1.25rem;line-height:1rem;font-weight:normal;font-family: 'Vidaloka', Arial, Helvetica, sans-serif;}
+footer ul{display:inline-block;vertical-align:bottom;margin:0;padding:0;}
+footer li{display:inline-block;vertical-align:bottom;line-height:1rem;}
