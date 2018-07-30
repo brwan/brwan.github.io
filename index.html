@@ -36,12 +36,12 @@ function changecss(cssFile, cssLinkIndex) {
     <p>Madrid, España</p>
   </header>
   <main>
-    <section class="profile">
-      <h2>Perfil</h2>
+    <section class="profile" aria-labelledby="profile-title">
+      <h2 id="profile-title">Perfil</h2>
       <p>Nacido en Barcelona. Viviendo en Madrid. Iba para diseñador, pero alguien tenía que arreglar "<em>La Web</em>". Más de 12 años de experiencia en proyectos con múltiples tecnologías. Especializado en estándares web, accesibilidad, desarrollo y gestión de proyectos en Drupal.</p>
     </section>
-    <section class="experience">
-      <h2>Experiencia</h2>
+    <section class="experience" aria-labelledby="experience-title">
+      <h2 id="experiencex-title">Experiencia</h2>
       <ul>
         <li>
           <h3><strong>Jefe de proyecto</strong> <mark>ILUNION Tecnología y Accesibilidad</mark></h3>
@@ -62,8 +62,8 @@ function changecss(cssFile, cssLinkIndex) {
         </li>
       </ul>
     </section>
-    <section class="experience-extra">
-      <h2>Experiencia previa</h2>
+    <section class="experience-extra" aria-labelledby="experiencex-title">
+      <h2 id="experiencex-title">Experiencia previa</h2>
       <ul>
         <li>
           <h3><strong>Diseñador Freelance</strong> <mark>Clientes y proyectos propios</mark></h3>
@@ -83,8 +83,8 @@ function changecss(cssFile, cssLinkIndex) {
         </li>
       </ul>
     </section>
-    <section class="education">
-    <h2>Formación</h2>
+    <section class="education" aria-labelledby="education-title">
+    <h2 id="education-title">Formación</h2>
       <ul>
         <li>
           <h3><strong>Grado en multimedia</strong> <mark>UOC</mark></h3>
@@ -100,8 +100,8 @@ function changecss(cssFile, cssLinkIndex) {
         </li>
       </ul>
     </section>
-    <section class="education-extra">
-      <h2>Formación complementaria</h2>
+    <section class="education-extra" aria-labelledby="educationx-title">
+      <h2 id="educationx-title">Formación complementaria</h2>
       <ul>
         <li><time datetime="2018">2018</time> <strong>Atencíon al cliente, liderazgo y gestión del tiempo</strong> César</li>
         <li><time datetime="2018">2018</time> <strong>RGPD</strong> Hard2bit</li>
@@ -118,19 +118,19 @@ function changecss(cssFile, cssLinkIndex) {
     </section>
   </main>
   <aside>
-    <section class="details">
-      <h2>Detalles</h2>
+    <section class="details" aria-labelledby="details-title">
+      <h2 id="details-title">Detalles</h2>
       <ul>
         <li class="lc"><span>Barcelona & Madrid</span></li>
         <li class="gm"><span>brunoperezlaffitte</span></li>
-        <li class="in"><a href="https://www.linkedin.com/in/bperezla/">bperezla</a></li>
-        <li class="tw"><a href="https://twitter.com/brunoprzl">brunoprzl</a></li>
-        <li class="gh"><a href="https://github.com/brwan">brwan</a></li>
-        <li class="cp"><a href="https://codepen.io/brwan/">brwan</a></li>
+        <li class="in"><a href="https://www.linkedin.com/in/bperezla/"><span>En LinkedIn:</span> bperezla</a></li>
+        <li class="tw"><a href="https://twitter.com/brunoprzl"><span>En Twitter:</span> brunoprzl</a></li>
+        <li class="gh"><a href="https://github.com/brwan"><span>En GitHub:</span> brwan</a></li>
+        <li class="cp"><a href="https://codepen.io/brwan/"><span>En CodePen:</span> brwan</a></li>
       </ul>
     </section>
-    <section class="interests">
-      <h2>Intereses</h2>
+    <section class="interests" aria-labelledby="interests-title">
+      <h2 id="interests-title">Intereses</h2>
       <ul>
         <li>Pixel perfect</li>
         <li>Tipografía para web</li>
@@ -142,8 +142,8 @@ function changecss(cssFile, cssLinkIndex) {
         <li>Trabajo en equipo</li>
       </ul>
     </section>
-    <section class="skills">
-      <h2>Conocimientos</h2>
+    <section class="skills" aria-labelledby="skills-title">
+      <h2 id="skills-title">Conocimientos</h2>
       <ul>
         <li>
           <h3>Profundos</h3>
@@ -169,12 +169,11 @@ function changecss(cssFile, cssLinkIndex) {
     <nav class="styles">
       <h2>Cambiar presentración</h2>
       <ul>
-        <li class="main"><a href="#" onclick="changecss('css/brwan01_main.css', 0)" title="inicial">1</a></li>
-        <li class="dark"><a href="#" onclick="changecss('css/brwan02_dark.css', 0)" title="inversa">2</a></li>
-        <li class="boxs"><a href="#" onclick="changecss('css/brwan03_boxs.css', 0)" title="cajas">3</a></li>
-        <li class="alte"><a href="#" onclick="changecss('css/brwan04_alte.css', 0)" title="bloques">4</a></li>
+        <li class="main"><a href="#" onclick="changecss('brwan2.css', 0)" title="inicial">1</a></li>
+        <li class="dark"><a href="#" onclick="changecss('brwan3.css', 0)" title="inversa">2</a></li>
+        <li class="boxs"><a href="#" onclick="changecss('brwan4.css', 0)" title="cajas">3</a></li>
+        <li class="alte"><a href="#" onclick="changecss('brwan5.css', 0)" title="bloques">4</a></li>
       </ul>
     </nav>
   </footer>
-</body>
 </html>

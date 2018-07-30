@@ -41,6 +41,7 @@ section p{margin:0 0 1rem;}
 section h3 + p{color:#333;margin:0 0 .5rem;}
 
 /*MAIN*/
+.details a > span{position:absolute;top:-999em;left:-999em;clip:rect(0 0 0 0);}
 .experience li{display:grid;position:relative;margin:0 0 2rem;padding:1.5rem;border:1px solid #333;}
 .experience li:before{content:"";position:absolute;right:-8px;bottom:-8px;height:0;border:10px solid #fff;}
 .experience li:after{content:"";position:absolute;right:3px;bottom:3px;width:0;height:0;border:10px solid #000;border-color:transparent transparent #000 transparent;transform:rotate(-45deg);}
